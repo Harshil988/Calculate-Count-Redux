@@ -1,23 +1,28 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+import { useSelector, useDispatch } from "react-redux"
+import {decriment,incement} from "./Action/Action"
+
+
+
 
 function App() {
+
+const state = useSelector((state)=>state.changeNum);
+const dispach = useDispatch();
+ 
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>incriment &  decriment</h1>
+      {state !== 100 &&<button onClick={()=>dispach(incement())} >+</button>}
+      <input type="text" value={state}/>
+      {state !== 0 &&<button onClick={()=>dispach(decriment())} >-</button>}
+
+
+
+
+
     </div>
   );
 }
