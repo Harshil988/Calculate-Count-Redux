@@ -40,13 +40,13 @@ table{
   width: 100%;
 }
 input{
-  width: 50px;
+  /* width: 50px; */
   margin: 30px;
   text-align: center;
   font-size: 30px;
 }
 button{
-  width: 50px;
+  /* width: 50px; */
   /* border-radius: 100%; */
   font-size: 40px;
   
